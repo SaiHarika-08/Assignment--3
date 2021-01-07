@@ -31,6 +31,7 @@ print("List of First n Natural numbers are:",num_list)
 print("Sum of List elements are :",sum_of_elements)
 
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 1.2 WAP to implement your own filter() function which works exactly like python built-in filter() function
