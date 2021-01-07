@@ -1,0 +1,73 @@
+### 1.1 WAP to implement your own myreduce() function which will work exactly like python's built-in function reduce()
+# own reduce() function
+
+def myreduce(num):
+    num_list=list(range(1,number+1))
+    sum_of_elements=0
+    
+    for i in num_list:
+        sum_of_elements+=i
+        
+    return num_list,sum_of_elements
+
+number=int(input("Please insert the number :"))
+
+output_value=myreduce(number)
+print("List of First n natural numbers are:",output_value[0])
+print("Sum of List elements are :",output_value[1])
+
+
+
+# built-in reduce() function
+
+number=int(input("Please insert the number :"))
+
+num_list= list(range(1,number+1))
+from functools import reduce
+sum_of_elements = reduce((lambda x, y: x + y), num_list)
+
+print("Output:")
+print("List of First n Natural numbers are:",num_list)
+print("Sum of List elements are :",sum_of_elements)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 1.2 WAP to implement your own filter() function which works exactly like python built-in filter() function
+# own filter() function
+
+number=int(input("Please insert the number: "))
+
+num_lst=list(range(1,number+1))
+
+
+def myfilter(num_list):
+    even_lst=[]
+    odd_lst=[]
+    
+    for i in num_list:
+        if(i%2==0):
+            even_lst.append(i)
+        else:
+            odd_lst.append(i)
+                
+    return even_lst,odd_lst
+
+output_value=myfilter(num_lst)
+print("List of numbers:",num_lst)
+print("List of Even numbers are:",output_value[0])
+print("List of Odd numbers are:",output_value[1])
+
+
+
+# built-in filter() function
+
+number=int(input("Please insert the number: "))
+num_lst=list(range(1,number+1))
+
+even_lst=list(filter(lambda x: x%2==0,num_lst))
+odd_lst=list(filter(lambda x: x%2!=0,num_lst))
+
+print("List of numbers:",num_lst)
+print("List of Even numbers are:",even_lst)
+print("List of Odd numbers are:",odd_lst)
