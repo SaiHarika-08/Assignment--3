@@ -1,0 +1,26 @@
+### 2. List comprehensions
+
+# ['x','xx','xxx','xxxx','y','yy','yyy','yyyy','z','zz','zzz','zzzz']
+str1=list('xyz')
+str2=[x*n for x in str1 for n in range(1,5) ]
+print(str1)
+print(str2)
+
+# ['x','y','z','xx','yy','zz','zzz','yyy','zzz','xxxx,'yyyy','zzzz']
+str3=[x*n for n in range(1,5) for x in str1 ]
+print(str3)
+
+# [[2],[3],[4],[3],[4],[5],[4],[5],[6]]
+num=[2,3,4]
+num1=[[x+n] for x in num for n in range(0,3)]
+print(num1)
+
+# [[2,3,4,5],[3,4,5,6],[4,5,6,7],[5,6,7,8]]
+num2=[2,3,4,5]
+num3=[[x+n for n in range(0,4)] for x in num2 ]
+print(num3)
+
+# [(1,1),(2,1),(3,1),(1,2,(2,2),(3,2),(1,3),(2,3),(3,3)]
+num4=[1,2,3]
+num5= [(b,a) for a in num4 for b in num4]
+print(num5)
